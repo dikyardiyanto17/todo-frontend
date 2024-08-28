@@ -96,6 +96,7 @@ const addTask = () => {
 
 const deleteTask = (index) => {
     tasks.value.splice(index, 1);
+    temporaryTasks.value = tasks.value.map(task => ({ ...task }))
 };
 
 const cancelAddTask = () => {

@@ -6,8 +6,7 @@ This application is a to-do list management system built with Vue.js. It allows 
 
 ## Key Features
 
-Task Management : Users can add new tasks, set their priority, and define deadlines.
-
+- Task Management : Users can add new tasks, set their priority, and define deadlines.
 - Task Organization : Tasks are categorized into different sections like "To Do," "On Progress," and "Done," and can be moved between these categories based on their completion status.
 - Data Persistence : The application uses localStorage to save the state of the to-do list. This ensures that user data persists across sessions, so tasks and categories remain consistent even after the browser is closed or refreshed.
 - Date Formatting : Dates are formatted according to the Indonesian locale for user convenience.
