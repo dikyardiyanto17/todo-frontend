@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, watch, onMounted, defineEmits, defineProps } from 'vue';
+import { ref, computed, watch, onMounted, defineEmits, defineProps, nextTick } from 'vue';
 
 const emit = defineEmits(['deleteCard']);
 const props = defineProps({
@@ -89,6 +89,7 @@ const startAddTask = () => {
 const addTask = () => {
     if (newTaskName.value.trim()) {
         tasks.value.push({ name: newTaskName.value, isDone: false });
+        temporaryTasks.value = tasks.value.map(task => ({ ...task }))
         newTaskName.value = '';
         addingTask.value = false;
     }
