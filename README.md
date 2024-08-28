@@ -225,30 +225,24 @@ cd <project-directory>
 
 Install the necessary dependencies using npm :
 
-<pre style="display: none;"><code>npm install</code></pre>
-
-<button style="position: absolute; right: 0; top: 0%;" onclick="navigator.clipboard.writeText('npm install')">Copy</button>
-
-<pre><code>npm install</code></pre>
+```bash
+npm install
+```
 
 Start the development server to see the component in action :
 
-<pre style="display: none;"><code>npm run dev</code></pre>
-
-<button style="position: absolute; right: 0; top: 0%;" onclick="navigator.clipboard.writeText('npm run dev')">Copy</button>
-
-<pre><code>npm run dev</code></pre>
+```bash
+npm run dev
+```
 
 This command will run the project and start a local development server. By default, it will be available at http://localhost:9199.
 You can change the port in vite.config.json
 
 To create a production build of your project, run:
 
-<pre style="display: none;"><code>npm run build</code></pre>
-
-<button style="position: absolute; right: 0; top: 0%;" onclick="navigator.clipboard.writeText('npm run build')">Copy</button>
-
-<pre><code>npm run build</code></pre>
+```bash
+npm run build
+```
 
 ## Screenshots
 
@@ -256,23 +250,23 @@ To create a production build of your project, run:
 
 **Description** : The Home screen displays all your tasks categorized by their completion status. It allows users to quickly add, view, and manage their tasks. It has three categories: Todo, On Progress, and Done.
 
-![Homescreen](src\assets\picture\todo-1.png)
+![Homescreen](https://github.com/dikyardiyanto17/todo-frontend/raw/main/src/assets/picture/todo-1.png)
 
 ### Todo Modal
 
 **Description** : You can input a title, set priority, add multiple tasks, and set a deadline. The deadline background color changes as it gets closer to the deadline.
 
-![Todomodal](src\assets\picture\todo-3.png)
+![Todomodal](https://github.com/dikyardiyanto17/todo-frontend/raw/main/src/assets/picture/todo-3.png)
 
 ### Card Preview
 
 **Description** : Hovering over a card triggers a pop-out animation. Clicking on the card takes you to its detail view.
-![Cardpreview](src\assets\picture\todo-4.png)
+![Cardpreview](https://github.com/dikyardiyanto17/todo-frontend/raw/main/src/assets/picture/todo-4.png)
 
 ### Sort Todo
 
 **Description** : Sort tasks by the nearest deadline or highest priority.
-![Sort](src\assets\picture\todo-5.png)
+![Sort](https://github.com/dikyardiyanto17/todo-frontend/raw/main/src/assets/picture/todo-5.png)
 
 ### Detail Todo
 
@@ -287,12 +281,12 @@ The background color of the deadline changes based on how close the deadline is 
 - Red if there are 1 or fewer days remaining
 - Green if there are 5 or fewer days remaining
 - Blue if there are more than 5 days remaining
-  ![Detail](src\assets\picture\todo-6.png)
+  ![Detail](https://github.com/dikyardiyanto17/todo-frontend/raw/main/src/assets/picture/todo-6.png)
 
 ### Responsive
 
 **Description** : The view will adjusted accordingly based on screen
-![Responsive](src\assets\picture\todo-7.png)
-![Responsive](src\assets\picture\todo-8.png)
+![Responsive_1](https://github.com/dikyardiyanto17/todo-frontend/raw/main/src/assets/picture/todo-7.png)
+![Responsive_2](https://github.com/dikyardiyanto17/todo-frontend/raw/main/src/assets/picture/todo-8.png)
 
 ## Staytuned for next update :)
