@@ -1,0 +1,20 @@
+/* @import './base.css'; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans';
+
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+#app {
+  margin: 0;
+  padding: 0;
+}
