@@ -254,7 +254,7 @@ npm run build
 
 ### Todo Modal
 
-**Description** : You can input a title, set priority, add multiple tasks, and set a deadline. The deadline background color changes as it gets closer to the deadline.
+**Description** : You can input a title, set priority, add multiple tasks, and set a deadline. The deadline background color changes as it gets closer to the deadline. To adding the Todo list task, press enter button to add the task.
 
 ![Todomodal](https://github.com/dikyardiyanto17/todo-frontend/raw/main/src/assets/picture/todo-3.png)
 
