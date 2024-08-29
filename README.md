@@ -87,6 +87,7 @@ Date Formatting : Formats dates in Indonesian locale.
   - minDate : Minimum selectable date for the deadline picker which is current date.
   - toDo : Array of categories Todo (To Do, On Progress, Done).
   - modalValue : Boolean flag to control modal visibility.
+  - taskWarning : Boolean flag to warn if Todo list task is empty.
 
 - Methods :
 

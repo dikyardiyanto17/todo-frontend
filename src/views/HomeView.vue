@@ -3,6 +3,7 @@ import VueDatePicker from '@vuepic/vue-datepicker';
 import TodoContainer from '@/components/TodoContainer.vue';
 import { ref, computed, nextTick, onMounted, onBeforeMount } from 'vue';
 const addingToDo = ref(false);
+const taskWarning = ref(false)
 const newTodoName = ref('')
 const newTodoInput = ref(null);
 const newFullDateCreated = new Intl.DateTimeFormat('id-ID', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date());
@@ -39,6 +40,7 @@ const addTask = () => {
         newInput.value.tasks.push({ name: newTodoName.value, isDone: false });
         newTodoName.value = '';
         addingToDo.value = false;
+        taskWarning.value = false
     }
 };
 const deleteTask = (index) => {
@@ -60,6 +62,7 @@ const handleTitle = (event) => {
 
 const addTodo = (input) => {
     if (newInput.value.tasks.length == 0 || !newInput.value.title || newInput.value.title.trim() == "" || !newInput.value.deadline || !newInput.value.priority) {
+        taskWarning.value = true
         return
     }
     let category = 0
@@ -72,6 +75,7 @@ const addTodo = (input) => {
         category = 0
     }
 
+    taskWarning.value = false
     const generateRandomId = () => {
         return '_' + Math.random().toString(36).substr(2, 9);
     };
@@ -79,6 +83,7 @@ const addTodo = (input) => {
     toDo.value[category].todoTasks.push({ id: generateRandomId(), name: newInput.value.title, priority: newInput.value.priority, created: new Date(), deadline: newInput.value.deadline, tasks: [...newInput.value.tasks] })
     newInput.value = { title: '', priority: 2, tasks: [], deadline: new Date(), created: new Date() };
     modalValue.value = false
+    newInput.value.title = ''
 }
 
 const updatedToDo = computed(() => {
@@ -170,7 +175,8 @@ onBeforeMount(() => {
                     <div class="todo-cards-risk">
                         <div class="todo-title-input">
                             <p>To Do Title : &nbsp;</p>
-                            <input type="text" name="todo-title" @input="handleTitle" id="todo-title">
+                            <input type="text" name="todo-title" v-model="newInput.title" @input="handleTitle"
+                                id="todo-title">
                         </div>
                         <div class="todo-priority-input">
                             <span class="priority">Priority :&nbsp;</span>
@@ -206,6 +212,7 @@ onBeforeMount(() => {
                         <i class="fas fa-plus"></i>
                         Add Task
                     </div>
+                    <p v-if="taskWarning" style="color: red; margin-left: 10px;">Add Task First</p>
                 </div>
                 <div class="custom-modal-footer">
                     <div class="created">
