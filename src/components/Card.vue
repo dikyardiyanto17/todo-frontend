@@ -101,6 +101,7 @@ const deleteTask = (index) => {
 };
 
 const cancelAddTask = () => {
+    addTask()
     addingTask.value = false;
     newTaskName.value = '';
 };

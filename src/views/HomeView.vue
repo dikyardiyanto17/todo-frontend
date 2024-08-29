@@ -48,6 +48,7 @@ const deleteTask = (index) => {
 };
 
 const cancelAddTask = () => {
+    addTask()
     addingToDo.value = false;
     newTodoName.value = '';
 };
@@ -180,11 +181,11 @@ onBeforeMount(() => {
                         </div>
                         <div class="todo-priority-input">
                             <span class="priority">Priority :&nbsp;</span>
-                            <button :class="['low', { selected: newInput.priority == 1 }]"
+                            <button type="button" :class="['low', { selected: newInput.priority == 1 }]"
                                 @click="setPriority(1)">Low</button>
-                            <button :class="['medium', { selected: newInput.priority == 2 }]"
+                            <button type="button" :class="['medium', { selected: newInput.priority == 2 }]"
                                 @click="setPriority(2)">Medium</button>
-                            <button :class="['high', { selected: newInput.priority == 3 }]"
+                            <button type="button" :class="['high', { selected: newInput.priority == 3 }]"
                                 @click="setPriority(3)">High</button>
                         </div>
                     </div>
@@ -226,8 +227,8 @@ onBeforeMount(() => {
                         </VueDatePicker>
                     </div>
                     <div class="custom-modal-buttons">
-                        <button class="cancel" @click.stop="handleTaskClick(false)">Cancel</button>
-                        <button @click="addTodo" class="save">Save</button>
+                        <button type="button" class="cancel" @click.stop="handleTaskClick(false)">Cancel</button>
+                        <button type="button" @click="addTodo" class="save">Save</button>
                     </div>
                 </div>
             </div>
